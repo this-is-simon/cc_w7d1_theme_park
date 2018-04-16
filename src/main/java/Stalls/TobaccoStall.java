@@ -4,8 +4,8 @@ import Visitors.Visitor;
 
 public class TobaccoStall extends Stall {
 
-    public TobaccoStall(String name, String ownerName, int parkingSpot){
-        super(name, ownerName, parkingSpot);
+    public TobaccoStall(String name, String ownerName, int parkingSpot, int funRating){
+        super(name, ownerName, parkingSpot, funRating);
     }
 
     public boolean canBuyTobacco(Visitor visitor){

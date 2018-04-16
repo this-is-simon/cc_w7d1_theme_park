@@ -16,16 +16,16 @@ public class TobaccoStallTest {
     public void before(){
         visitor = new Visitor("JoJo", 17, 160, 20 );
         visitor2 = new Visitor("Koko", 21, 150, 30 );
-        tobaccoStall = new TobaccoStall("El Smoko", "Smokey McJones", 302);
+        tobaccoStall = new TobaccoStall("El Smoko", "Smokey McJones", 302, 9);
     }
 
     @Test
-    public void visitorIsNotAllowedTo(){
+    public void visitorIsNotAllowedToBuyTobacco(){
         assertEquals(false, tobaccoStall.canBuyTobacco(visitor));
     }
 
     @Test
-    public void visitorIsAllowedTo(){
+    public void visitorIsAllowedToBuyTobacco(){
         assertEquals(true, tobaccoStall.canBuyTobacco(visitor2));
     }
 
