@@ -28,4 +28,9 @@ public class IceCreamStallTest {
     public void visitorCanBuyIceCream(){
         assertEquals(15, iceCreamStall1.priceFor(visitor), 0.01);
     }
+
+    @Test
+    public void canGetFunRating(){
+        assertEquals(7, iceCreamStall1.getFunRating());
+    }
 }

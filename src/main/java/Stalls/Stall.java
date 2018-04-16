@@ -1,9 +1,10 @@
 package Stalls;
 
 import Interfaces.IChargeable;
+import Interfaces.IEnjoyable;
 import Visitors.Visitor;
 
-public abstract class Stall implements IChargeable {
+public abstract class Stall implements IChargeable, IEnjoyable {
 
     private String name;
     private String ownerName;
@@ -21,14 +22,15 @@ public abstract class Stall implements IChargeable {
         return this.name;
     }
 
-    public int funRating(){
-        return this.funRating;
-    }
-
     public double priceFor(Visitor visitor){
         double wallet = visitor.getMoney();
         return wallet -= 5.00;
     };
+
+    public int getFunRating(){
+        return this.funRating;
+    }
+
 
 
 }
