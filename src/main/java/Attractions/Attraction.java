@@ -2,7 +2,7 @@ package Attractions;
 
 import Interfaces.IEnjoyable;
 
-public abstract class Attraction {
+public abstract class Attraction implements IEnjoyable {
 
     private String name;
     private int funRating;
