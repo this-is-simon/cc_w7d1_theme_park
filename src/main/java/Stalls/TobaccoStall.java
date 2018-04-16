@@ -1,5 +1,6 @@
 package Stalls;
 
+import Interfaces.IEnjoyable;
 import Visitors.Visitor;
 
 public class TobaccoStall extends Stall {

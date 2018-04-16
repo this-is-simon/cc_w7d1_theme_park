@@ -29,4 +29,9 @@ public class TobaccoStallTest {
         assertEquals(true, tobaccoStall.canBuyTobacco(visitor2));
     }
 
+    @Test
+    public void visitorCanBuyCigs(){
+        assertEquals(15, tobaccoStall.priceFor(visitor), 0.01);
+    }
+
 }

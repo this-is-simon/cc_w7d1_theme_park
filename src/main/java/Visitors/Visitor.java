@@ -26,5 +26,6 @@ public class Visitor{
         return this.height;
     }
 
+    public double getMoney() { return this.money; }
 
 }
