@@ -7,39 +7,26 @@ import java.util.ArrayList;
 public class ThemePark {
 
     private ArrayList<IEnjoyable> funThings;
+    private ArrayList<IEnjoyable> attractionNames;
 
-    public ThemePark(){
+    public ThemePark(ArrayList<IEnjoyable> funThings, ArrayList<IEnjoyable> attractionNames){
         this.funThings = funThings;
+        this.attractionNames = attractionNames;
     }
-    
-}
 
-//
-//public class Network {
-//    private String name;
-//    private ArrayList<INetworkable> devices;
-//
-//
-//    public Network(String name){
-//
-//        this.devices = new ArrayList<>();
-//        this.name = name;
-//    }
-//
-//    public String getName(){
-//        return name;
-//    }
-//
-//    public int deviceCount(){
-//        return devices.size();
-//    }
-//
-//
-//    public void connect(INetworkable device){
-//        devices.add(device);
-//    }
-//
-//
-//    public void disconnectAll(){
-//        devices.clear();
-//    }
+    public String reportEnjoyables(){
+        String report = "";
+        for(IEnjoyable ride : funThings){
+            report += ride.getName() + " : " + ride.getFunRating() + ", ";
+        }
+        return report;
+    }
+
+    public String reportAttractionNames(){
+        String report = "";
+        for(IEnjoyable attraction : attractionNames ){
+            report += attraction.getName() + ", ";
+        }
+        return report;
+    }
+}
